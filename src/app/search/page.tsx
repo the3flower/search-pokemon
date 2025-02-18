@@ -3,10 +3,13 @@ export default async function SearchPage() {
     const data = await response.json()
     
     return(
-        <ul>
-            {data.map((pokemon) => (
-                <li key={pokemon.id}>{pokemon.name}</li>
-            ))}
-        </ul>
+        <div>
+            <h1>Search for Pokemon</h1>
+            <ul>
+                {data.map((pokemon) => (
+                    <li key={pokemon.id}>{pokemon.name}</li>
+                ))}
+            </ul>
+        </div>
     )
 }
